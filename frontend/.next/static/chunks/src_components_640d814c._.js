@@ -16,7 +16,7 @@ var _s = __turbopack_context__.k.signature(), _s1 = __turbopack_context__.k.sign
 'use client';
 ;
 const COOKIE_NAME = 'active_theme';
-const DEFAULT_THEME = 'default';
+const DEFAULT_THEME = 'blue';
 function setThemeCookie(theme) {
     if ("TURBOPACK compile-time falsy", 0) {
         "TURBOPACK unreachable";

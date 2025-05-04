@@ -33,3 +33,5 @@ coverage/
 # Optional: If using Yarn Plug’n’Play
 .pnp.*
 .pnp
+
+frontend/.next

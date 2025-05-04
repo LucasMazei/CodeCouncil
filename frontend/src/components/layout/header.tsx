@@ -23,8 +23,6 @@ export default function Header() {
           <SearchInput />
         </div>
         <UserNav />
-        <ModeToggle />
-        <ThemeSelector />
       </div>
     </header>
   );

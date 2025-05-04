@@ -47,6 +47,8 @@ import { usePathname, useRouter } from 'next/navigation';
 import * as React from 'react';
 import { Icons } from '../icons';
 import { OrgSwitcher } from '../org-switcher';
+import { ThemeSelector } from '../theme-selector';
+
 export const company = {
   name: 'Acme Inc',
   logo: IconPhotoUp,
@@ -144,6 +146,9 @@ export default function AppSidebar() {
         </SidebarGroup>
       </SidebarContent>
       <SidebarFooter>
+        <div className='p-4'>
+           <ThemeSelector />
+        </div>
         <SidebarMenu>
           <SidebarMenuItem>
             <DropdownMenu>

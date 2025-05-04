@@ -71,7 +71,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$ne
 ;
 ;
 const COOKIE_NAME = 'active_theme';
-const DEFAULT_THEME = 'default';
+const DEFAULT_THEME = 'blue';
 function setThemeCookie(theme) {
     if ("TURBOPACK compile-time truthy", 1) return;
     "TURBOPACK unreachable";
