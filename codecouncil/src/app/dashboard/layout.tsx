@@ -22,9 +22,9 @@ export default function DashboardLayout({
 
   return (
     <div className="flex min-h-screen font-geist">
-      {/* Sidebar */}
-      <div className="dashboard-sidebar w-64">
-        <div className="dashboard-sidebar-header p-4 flex justify-between items-center">
+      {/* Fixed Sidebar */}
+      <div className="dashboard-sidebar fixed top-0 left-0 w-64 h-screen overflow-y-auto z-10">
+        <div className="dashboard-sidebar-header p-4 flex justify-between items-center sticky top-0 z-20">
           <h1 className="text-2xl font-bold text-neon-blue">CodeCouncil</h1>
           <button 
             onClick={toggleTheme}
@@ -70,8 +70,8 @@ export default function DashboardLayout({
         </nav>
       </div>
 
-      {/* Main content */}
-      <div className="dashboard-content flex-1 overflow-auto">
+      {/* Main content with left margin for the sidebar */}
+      <div className="dashboard-content flex-1 ml-64 overflow-auto">
         {children}
       </div>
     </div>
