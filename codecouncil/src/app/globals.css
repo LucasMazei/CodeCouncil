@@ -84,6 +84,23 @@
     @apply hover:border-light-blue hover:shadow-light;
   }
 
+  /* Tabs styling */
+  [role="tablist"] {
+    @apply bg-dark-card text-gray-400 transition-colors duration-200;
+  }
+
+  html.light-mode [role="tablist"] {
+    @apply bg-light-card text-gray-600;
+  }
+
+  [role="tab"][data-state="active"] {
+    @apply bg-dark-bg text-neon-blue shadow-sm;
+  }
+
+  html.light-mode [role="tab"][data-state="active"] {
+    @apply bg-white text-light-blue;
+  }
+
   /* Dashboard specific styles */
   .dashboard-sidebar {
     @apply bg-dark-bg border-r border-dark-border;
