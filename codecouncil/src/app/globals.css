@@ -1,0 +1,156 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply bg-dark-bg text-white;
+  }
+  
+  html.light-mode {
+    @apply bg-light-bg text-gray-800;
+  }
+  
+  body {
+    @apply min-h-screen transition-colors duration-200;
+  }
+  
+  /* Custom select styling */
+  select {
+    @apply appearance-none;
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3E%3Cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3E%3C/svg%3E");
+    background-position: right 0.5rem center;
+    background-repeat: no-repeat;
+    background-size: 1.5em 1.5em;
+  }
+  
+  html.light-mode select {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3E%3Cpath stroke='%234b5563' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3E%3C/svg%3E");
+  }
+}
+
+@layer components {
+  .neon-input {
+    @apply bg-dark-card border border-dark-border text-white placeholder-gray-400;
+    @apply focus:border-neon-blue focus:ring-2;
+    @apply transition-all duration-200;
+    @apply rounded-lg px-3 py-2;
+    --tw-ring-color: oklch(.623 .214 259.815 / 0.2);
+  }
+
+  html.light-mode .neon-input {
+    @apply bg-light-card border border-light-border text-gray-800 placeholder-gray-500;
+    @apply focus:border-light-blue focus:ring-2;
+    --tw-ring-color: oklch(.623 .214 259.815 / 0.2);
+  }
+  
+  /* Custom select styling */
+  .neon-select {
+    @apply neon-input pr-10 cursor-pointer;
+    @apply bg-dark-card hover:bg-dark-card/70;
+    @apply focus:ring-2;
+    --tw-ring-color: oklch(.623 .214 259.815 / 0.3);
+  }
+  
+  html.light-mode .neon-select {
+    @apply bg-light-card hover:bg-gray-50;
+    --tw-ring-color: oklch(.623 .214 259.815 / 0.3);
+  }
+
+  .neon-button {
+    @apply bg-dark-card text-neon-blue border border-neon-blue;
+    @apply hover:bg-neon-blue hover:text-dark-bg;
+    @apply transition-all duration-200;
+    @apply shadow-neon;
+    @apply rounded-lg px-4 py-2;
+    @apply font-medium;
+  }
+
+  html.light-mode .neon-button {
+    @apply bg-light-card text-light-blue border border-light-blue;
+    @apply hover:bg-light-blue hover:text-white;
+    @apply shadow-light;
+  }
+
+  .neon-card {
+    @apply bg-dark-card border border-dark-border;
+    @apply hover:border-neon-blue hover:shadow-neon;
+    @apply transition-all duration-200;
+    @apply rounded-xl;
+  }
+
+  html.light-mode .neon-card {
+    @apply bg-light-card border border-light-border;
+    @apply hover:border-light-blue hover:shadow-light;
+  }
+
+  /* Dashboard specific styles */
+  .dashboard-sidebar {
+    @apply bg-dark-bg border-r border-dark-border;
+  }
+  
+  html.light-mode .dashboard-sidebar {
+    @apply bg-light-bg border-light-border;
+  }
+  
+  .dashboard-sidebar-header {
+    @apply border-b border-dark-border;
+  }
+  
+  html.light-mode .dashboard-sidebar-header {
+    @apply border-light-border;
+  }
+  
+  .dashboard-content {
+    @apply bg-dark-bg;
+  }
+  
+  html.light-mode .dashboard-content {
+    @apply bg-light-bg;
+  }
+
+  /* Theme toggle button */
+  .theme-toggle {
+    @apply p-2 rounded-full;
+    @apply transition-all duration-200;
+    @apply flex items-center justify-center;
+    @apply bg-dark-card text-white hover:bg-dark-border;
+  }
+
+  html.light-mode .theme-toggle {
+    @apply bg-light-card text-gray-800 hover:bg-gray-100;
+  }
+  
+  /* Navigation items */
+  .nav-item {
+    @apply text-gray-400;
+  }
+  
+  html.light-mode .nav-item {
+    @apply text-gray-600;
+  }
+  
+  .nav-item-active {
+    @apply bg-dark-card border-l-2 border-neon-blue text-neon-blue;
+  }
+  
+  html.light-mode .nav-item-active {
+    @apply bg-light-card border-light-blue text-light-blue;
+  }
+  
+  /* Custom select group */
+  .select-group {
+    @apply relative flex flex-col;
+  }
+  
+  .select-label {
+    @apply text-sm font-medium mb-1.5 text-gray-300 transition-colors;
+    @apply absolute -top-3 left-2 px-1 z-10 bg-dark-card;
+    @apply text-neon-blue;
+  }
+  
+  html.light-mode .select-label {
+    @apply text-gray-600 bg-light-card;
+    @apply text-light-blue;
+  }
+}
