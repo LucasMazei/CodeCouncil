@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 33, "column": 0}, "map": {"version":3,"sources":["file:///home/mazei/Acer/Users/mazei/Documents/Programming/CodeCouncil/frontend/src/app/page.tsx"],"sourcesContent":["import { auth } from '@clerk/nextjs/server';\nimport { redirect } from 'next/navigation';\n\nexport default async function Page() {\n  const { userId } = await auth();\n\n  if (!userId) {\n    return redirect('/auth/sign-in');\n  } else {\n    redirect('/dashboard/overview');\n  }\n}\n"],"names":[],"mappings":";;;AAAA;AACA;AAAA;;;AAEe,eAAe;IAC5B,MAAM,EAAE,MAAM,EAAE,GAAG,MAAM,CAAA,GAAA,sYAAA,CAAA,OAAI,AAAD;IAE5B,IAAI,CAAC,QAAQ;QACX,OAAO,CAAA,GAAA,oTAAA,CAAA,WAAQ,AAAD,EAAE;IAClB,OAAO;QACL,CAAA,GAAA,oTAAA,CAAA,WAAQ,AAAD,EAAE;IACX;AACF","debugId":null}}]
+}

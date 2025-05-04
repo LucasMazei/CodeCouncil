@@ -1,0 +1,33 @@
+---
+description:
+globs:
+alwaysApply: false
+---
+# Project Structure Guide
+
+This project is a web application with a distinct frontend and potentially backend-related documentation/schema files at the root.
+
+## Root Directory
+
+- [`database-schema.md`](mdc:database-schema.md): Describes the database structure.
+- [`requirements.md`](mdc:requirements.md): Outlines the project requirements.
+- `frontend/`: Contains the Next.js frontend application.
+
+## Frontend Directory (`frontend/`)
+
+The frontend is built using Next.js.
+
+- [`package.json`](mdc:frontend/package.json): Defines Node.js dependencies and scripts.
+- [`next.config.js`](mdc:frontend/next.config.js): Configuration file for Next.js.
+- [`tsconfig.json`](mdc:frontend/tsconfig.json): TypeScript configuration.
+- `frontend/src/`: Main source code directory.
+  - `frontend/src/app/`: Contains the application routes and pages (App Router).
+  - `frontend/src/components/`: Reusable UI components.
+  - `frontend/src/lib/`: Utility functions and libraries.
+  - `frontend/src/config/`: Configuration specific to the frontend application.
+  - `frontend/src/features/`: Contains code related to specific application features.
+  - `frontend/src/hooks/`: Custom React hooks.
+  - `frontend/src/types/`: TypeScript type definitions.
+  - `frontend/src/constants/`: Constant values used throughout the application.
+  - [`middleware.ts`](mdc:frontend/src/middleware.ts): Next.js middleware configuration.
+- `frontend/public/`: Static assets.
